@@ -8,8 +8,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    width: 100%;
+}
 .grid{
-    width: 1200px;
+    width: 1140px;
     margin: auto;
     height: 100%;
     color: grey;
@@ -22,6 +25,7 @@
     display: flex;
     background-color: #F9003D;
     justify-content: flex-end;
+    height: 60px;
 }
 #topo nav{
     display: flex;
@@ -29,7 +33,7 @@
     justify-content: flex-end;
 }
 #topo h2{
-    padding: 21px 50px;
+    padding: 18.5px 50px;
     color: white;
     font-size: 18px;
     font-weight: 350;
@@ -37,8 +41,11 @@
     font-family: 'Bebas Neue', 'cursive';
 }
 #topo a{text-decoration: none;}
-#topo h2:hover{
+#topo a:hover{
     background-color: rgba(242, 0, 52, 1)
+}
+.fa-bars{
+    display: none;
 }
 
 
@@ -56,7 +63,7 @@
     color: white;
     border-bottom: 1px solid yellow;
     padding: 20px 0;
-    font-size: 96px;;
+    font-size: 96px;
     width: 600px;
     text-transform: uppercase;
     font-family: 'Bebas Neue', cursive;
@@ -78,7 +85,7 @@
 
 /* Bloco 2 */
 #bloco2{
-    height: 700px;
+    height: 780px;
     background-color: #080324;
 }
 #bloco2 h1{
@@ -199,4 +206,124 @@
     font-family: 'Open Sans', sans-serif;
     color: white;
     font-size: 20px;
+}
+
+
+
+/* Responsividade */
+
+
+@media screen and (max-width: 1199px){
+    .grid{
+        width: 942px;
+    }
+    #bloco2 img{
+        width: calc(490px * 0.95);
+        width: calc(475px * 0.95);
+        margin-right: 80px;
+    }
+    #bloco2{
+        height: 930px;
+    }
+}
+@media screen and (max-width: 991px){
+    .icon{
+        width: 60px;
+        height: 60px;
+        color: white;
+        background-color: #000;
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .fa-bars{
+        display: block;
+        font-size: 1.8rem;
+        /* margin: 20px calc(100% - 20px) 20px 0; */
+    }
+    #topo a:hover{
+        background-color: #000;
+    }
+    #topo nav{
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        top: 60px;
+        height: 250px;;
+        background-color: black;
+    }
+    #topo nav a:hover{
+        text-decoration: underline white;
+    }
+    .grid{
+        width: 730px;
+    }
+    .desce{
+        flex-direction: column;
+        align-items: center;
+    }
+    #bloco2{
+        text-align: center;
+        height: 1100px;
+    }
+    #bloco2 img{
+        margin: 0 0 20px 0;
+    }
+    #bloco3 h3{
+        font-size: 22px;
+        height: 60px;
+        width: 200px;
+    }
+    #bloco3 p{
+        font-size: 18px;
+    }
+    #bloco4 div img{
+        position: unset;
+        width: 460px;
+        height: 460px;
+    }
+    #bloco4{
+        height: 800px;
+        width: 100%;
+    }
+    #bloco4 div{
+        width: 600px;
+        height: 600px;
+        flex-direction: column;
+        align-items: center;
+    }
+    #bloco4 h2{
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 767px){
+.grid{
+    width: 643px;
+}
+#bloco1 .grid{
+    align-items: center;
+}
+}
+@media screen and (max-width: 676px){
+.grid{
+    width: 547px;
+}
+#bloco1 .grid{
+    padding: 0 0 0 49px;
+}
+#bloco2{
+    height: 1300px;
+}
+#bloco3 h3{
+    width: 180px;
+}
+#bloco4 div{
+    width: 547px;
+}
 }

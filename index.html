@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/home.css">
     <title>Desenvolvimento de Sistemas Senai</title>
 </head>
 <body>
     <header id="topo">
         <div class="grid f">
-            <nav>
+            <nav id="barra">
                 <a href=""><h2>Início</h2></a>
                 <a href=""><h2>Sobre</h2></a>
                 <a href=""><h2>Desafios</h2></a>
                 <a href=""><h2>Endereço</h2></a>
             </nav>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
     </header>
     <section id="bloco1">
@@ -29,7 +33,7 @@
     <section id="bloco2">
         <div class="grid">
             <h1>Sobre os projetos</h1>
-            <div class="f">
+            <div class="f desce">
                 <img src="./images/imagem-seção-sobre.jpg" alt="Professor explicando para alunos alguma coisa">
                 <div>
                     <h3>Participantes</h3>
@@ -56,5 +60,17 @@
         </div>
     </section>
     <footer id="pe"><p>Copyright © 2020 - Escola Senai de Informática</p></footer>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("barra");
+          if (x.style.display === "flex") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "flex";
+          }
+        }
+    </script>
+
 </body>
 </html>
